@@ -28,14 +28,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:switch_dpdt
-LIBS:switch_spdt
 LIBS:Power Supply-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 5
 Title "Power Supply"
 Date ""
 Rev ""
@@ -323,23 +321,12 @@ $EndComp
 $Comp
 L R R?
 U 1 1 55CE60EE
-P 4450 4650
-F 0 "R?" V 4530 4650 50  0000 C CNN
-F 1 "R" V 4450 4650 50  0000 C CNN
-F 2 "" V 4380 4650 30  0000 C CNN
-F 3 "" H 4450 4650 30  0000 C CNN
-	1    4450 4650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Earth #PWR?
-U 1 1 55CE6153
-P 4450 4800
-F 0 "#PWR?" H 4450 4550 50  0001 C CNN
-F 1 "Earth" H 4450 4650 50  0001 C CNN
-F 2 "" H 4450 4800 60  0000 C CNN
-F 3 "" H 4450 4800 60  0000 C CNN
-	1    4450 4800
+P 4600 4650
+F 0 "R?" V 4680 4650 50  0000 C CNN
+F 1 "R" V 4600 4650 50  0000 C CNN
+F 2 "" V 4530 4650 30  0000 C CNN
+F 3 "" H 4600 4650 30  0000 C CNN
+	1    4600 4650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -364,6 +351,49 @@ F 3 "" H 7700 3400 60  0000 C CNN
 	1    7700 3400
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 5400 900  1400 1450
+U 564515C4
+F0 "Voltage Multiplier" 60
+F1 "Voltage Multiplier.sch" 60
+F2 "VAC+" I L 5400 1200 60 
+F3 "VAC-" I L 5400 1950 60 
+F4 "5xVDC" I R 6800 1950 60 
+$EndSheet
+$Sheet
+S 9400 4200 1200 1450
+U 564650FF
+F0 "Timer" 60
+F1 "Timer.sch" 60
+$EndSheet
+$Sheet
+S 8250 900  1150 1500
+U 56465396
+F0 "Signal Amplifier" 60
+F1 "Signal Amplifier.sch" 60
+$EndSheet
+$Comp
+L Earth #PWR?
+U 1 1 56468113
+P 5200 2000
+F 0 "#PWR?" H 5200 1750 50  0001 C CNN
+F 1 "Earth" H 5200 1850 50  0001 C CNN
+F 2 "" H 5200 2000 60  0000 C CNN
+F 3 "" H 5200 2000 60  0000 C CNN
+	1    5200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 5646910E
+P 4750 4300
+F 0 "D?" H 4750 4400 50  0000 C CNN
+F 1 "LED" H 4750 4200 50  0000 C CNN
+F 2 "" H 4750 4300 60  0000 C CNN
+F 3 "" H 4750 4300 60  0000 C CNN
+	1    4750 4300
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
 	3800 2100 4100 2100
 Wire Wire Line
@@ -374,7 +404,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 2800 2600 2600
 Wire Wire Line
-	2600 2100 2600 2000
+	2600 1200 2600 2100
 Wire Wire Line
 	2600 2000 2800 2000
 Wire Wire Line
@@ -384,7 +414,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 3700 4100 3700
 Wire Wire Line
-	4100 3700 4100 3600
+	4100 3600 4100 4900
 Wire Wire Line
 	2400 3100 2400 3000
 Wire Wire Line
@@ -396,7 +426,7 @@ Wire Wire Line
 Wire Wire Line
 	6050 2900 6050 3050
 Wire Wire Line
-	5650 3350 5650 3900
+	5650 3900 5650 3350
 Wire Wire Line
 	6050 3900 6050 3350
 Wire Wire Line
@@ -424,9 +454,6 @@ Wire Wire Line
 	3250 4400 2850 4400
 Connection ~ 3250 3900
 Wire Wire Line
-	4450 4100 4450 3900
-Connection ~ 4450 3900
-Wire Wire Line
 	7750 2900 7750 3200
 Connection ~ 6500 2900
 Wire Wire Line
@@ -438,4 +465,41 @@ Wire Wire Line
 	7700 3400 7750 3400
 Connection ~ 5650 3900
 Connection ~ 5650 2900
+Wire Wire Line
+	5200 2000 5200 1950
+Wire Wire Line
+	5200 1950 5400 1950
+Wire Wire Line
+	4750 4500 4450 4500
+Wire Wire Line
+	4450 4100 4750 4100
+Wire Wire Line
+	4600 4800 4600 4900
+Wire Wire Line
+	4600 4900 4100 4900
+Connection ~ 4100 3700
+Wire Wire Line
+	4600 4100 4600 3900
+Connection ~ 4600 3900
+Connection ~ 4600 4100
+$Sheet
+S 6800 4500 1200 1600
+U 5646AC7D
+F0 "Variable Regulators" 60
+F1 "Variable Regulators.sch" 60
+$EndSheet
+$Comp
+L SPST SW?
+U 1 1 5646B61A
+P 4900 1200
+F 0 "SW?" H 4900 1300 50  0000 C CNN
+F 1 "SPST" H 4900 1100 50  0000 C CNN
+F 2 "" H 4900 1200 60  0000 C CNN
+F 3 "" H 4900 1200 60  0000 C CNN
+	1    4900 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1200 2600 1200
+Connection ~ 2600 2000
 $EndSCHEMATC
