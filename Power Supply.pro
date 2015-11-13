@@ -1,4 +1,4 @@
-update=8/14/2015 8:28:04 AM
+update=11/13/2015 12:04:50 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../KiCad/Libraries/Components
@@ -60,3 +58,5 @@ LibName28=contrib
 LibName29=valves
 LibName30=YL_e_switch/e_switch/switch_dpdt
 LibName31=YL_e_switch/e_switch/switch_spdt
+[general]
+version=1

@@ -1,0 +1,109 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:Power Supply-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 3750 2200 0    60   Input ~ 0
+SIGi1
+Text HLabel 3750 2500 0    60   Input ~ 0
+SIG2i
+Text HLabel 4800 2200 2    60   Input ~ 0
+SIG1o
+Text HLabel 4800 2500 2    60   Input ~ 0
+SIG2o
+$Comp
+L LM358 U?
+U 1 1 56478D0D
+P 4100 3600
+F 0 "U?" H 4050 3800 60  0000 L CNN
+F 1 "LM358" H 4050 3350 60  0000 L CNN
+F 2 "" H 4100 3600 60  0000 C CNN
+F 3 "" H 4100 3600 60  0000 C CNN
+	1    4100 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM358 U?
+U 2 1 56478DF4
+P 5900 3250
+F 0 "U?" H 5850 3450 60  0000 L CNN
+F 1 "LM358" H 5850 3000 60  0000 L CNN
+F 2 "" H 5900 3250 60  0000 C CNN
+F 3 "" H 5900 3250 60  0000 C CNN
+	2    5900 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L SWITCH_INV SW?
+U 1 1 56478EB0
+P 5600 4050
+F 0 "SW?" H 5400 4200 50  0000 C CNN
+F 1 "SWITCH_INV" H 5450 3900 50  0000 C CNN
+F 2 "" H 5600 4050 60  0000 C CNN
+F 3 "" H 5600 4050 60  0000 C CNN
+	1    5600 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 564791C6
+P 4650 4550
+F 0 "R?" V 4730 4550 50  0000 C CNN
+F 1 "R" V 4650 4550 50  0000 C CNN
+F 2 "" V 4580 4550 30  0000 C CNN
+F 3 "" H 4650 4550 30  0000 C CNN
+	1    4650 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV?
+U 1 1 5647940B
+P 3300 4500
+F 0 "RV?" H 3300 4400 50  0000 C CNN
+F 1 "POT" H 3300 4500 50  0000 C CNN
+F 2 "" H 3300 4500 60  0000 C CNN
+F 3 "" H 3300 4500 60  0000 C CNN
+	1    3300 4500
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
